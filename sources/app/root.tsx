@@ -41,7 +41,7 @@ export default function App() {
 				}
 			</head>
 			<body>
-				<Talkr languages={{en, ko}} defaultLanguage='en'>
+				<Talkr languages={{en, ko}} defaultLanguage='ko'>
 					<Outlet />
 				</Talkr>
 				<ScrollRestoration />

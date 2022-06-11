@@ -1,5 +1,13 @@
 {
   "index": {
-    "title": "Hello"
+    "make": "MAKE",
+    "your": "YOUR",
+    "brand": "BRAND",
+    "company": {
+      "description": "결과로 입증하는 마케팅 전문 기업",
+      "message": "웹 사이트 리뉴얼 중입니다."
+    },
+    "contact": "문의하기",
+    "switchLanguage": "English"
   }
 }
