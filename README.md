@@ -14,7 +14,7 @@
 # <a id="development">#</a> Development
 
 We tend to use latest stacks as possible for security and performance.
-Currently, we're using Node.JS v16.7 (specified in `sources/.node-version`) and NPM.
+Currently, we're using Node.JS `lts-gallium` (specified in `sources/.node-version`) and NPM.
 
 To install Node.JS, we recommend [nvm](https://nvm.sh/) and [asdf-vm](https://github.com/asdf-vm/asdf-nodejs) to manage Node.JS versions seamlessly between projects.
 All failures due to version mismatching will be not handled.
