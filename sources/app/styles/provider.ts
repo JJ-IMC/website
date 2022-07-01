@@ -15,3 +15,10 @@ export const {styled, createTheme, getCssText} = createStitches({
 		},
 	},
 });
+
+export const inverted = createTheme({
+	colors: {
+		white: '#000',
+		black: '#fff',
+	},
+});
