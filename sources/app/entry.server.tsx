@@ -1,7 +1,13 @@
 import type {EntryContext} from '@remix-run/cloudflare';
 import {RemixServer} from '@remix-run/react';
 import {renderToString} from 'react-dom/server';
-import glory from './styles/glory';
+import {getCssText} from './styles/provider';
+
+const prepend = `
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+`.trim();
 
 export default function handleRequest(
 	request: Request,
@@ -12,7 +18,8 @@ export default function handleRequest(
 	const markup = renderToString(
 		<RemixServer context={remixContext} url={request.url} />,
 	)
-		.replace('__STYLES__', `<style id="prestyle">${glory.raw ?? ''}</style>`);
+		.replace('__PREPEND__', prepend)
+		.replace('__STYLES__', `<style id="stitches">${getCssText() || ''}</style>`);
 
 	responseHeaders.set('Content-Type', 'text/html');
 

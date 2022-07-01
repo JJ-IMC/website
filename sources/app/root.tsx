@@ -27,6 +27,13 @@ export const links: LinksFunction = () => ([
 	},
 ]);
 
+const insertions = {
+	head: [
+		'__STYLES__',
+		'__PREPEND__',
+	].join('\n'),
+};
+
 export default function App() {
 	return (
 		<html lang='en'>
@@ -36,7 +43,7 @@ export default function App() {
 				{
 					// https://remix.run/docs/en/v1/guides/styling#css-in-js-libraries
 					typeof document === 'undefined'
-						? '__STYLES__'
+						? insertions.head
 						: null
 				}
 			</head>
