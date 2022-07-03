@@ -5,10 +5,13 @@ export const BaseContainer = styled('section', {
 	backgroundColor: '$white',
 	fontFamily: '$sansSerif',
 
-	padding: '16px',
+	height: '100%',
+
+	margin: 0,
 });
 
 export const ContentContainer = styled(BaseContainer, {
+	padding: '16px',
 	margin: '0 auto',
-	maxWidth: '720px',
+	maxWidth: '1200px',
 });

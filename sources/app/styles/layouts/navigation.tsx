@@ -1,6 +1,10 @@
 import {HorizontalListItem, HorizontalListParent} from '../components/list/horizontal';
 import {styled} from '../provider';
 
+export const NavigationParent = styled(HorizontalListParent, {
+	gap: '50px',
+});
+
 export const NavigationItem = styled(HorizontalListItem, {
 	color: '$black',
 	fontSize: '20px',
@@ -56,7 +60,7 @@ export const listItems: Array<{
 
 export function Navigation() {
 	return (
-		<HorizontalListParent
+		<NavigationParent
 			css={{
 				margin: 0,
 			}}
@@ -72,6 +76,6 @@ export function Navigation() {
 						</NavigationItem>
 					))
 			}
-		</HorizontalListParent>
+		</NavigationParent>
 	);
 }

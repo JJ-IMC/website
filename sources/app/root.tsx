@@ -9,6 +9,7 @@ import {
 } from '@remix-run/react';
 // Styles
 import modernNormalize from 'modern-normalize/modern-normalize.css';
+import globalStyle from './styles/statics/global.css';
 // Internalization
 import {Talkr} from 'talkr';
 import en from '../internalization/en.json';
@@ -24,6 +25,10 @@ export const links: LinksFunction = () => ([
 	{
 		rel: 'stylesheet',
 		href: modernNormalize,
+	},
+	{
+		rel: 'stylesheet',
+		href: globalStyle,
 	},
 ]);
 
