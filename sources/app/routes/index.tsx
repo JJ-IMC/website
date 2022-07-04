@@ -1,8 +1,8 @@
+import HeroImageSource from '~/../files/index/hero.webp';
 import {RoundedButton} from '~/styles/components/buttons';
 import {BaseContainer, ContentContainer} from '~/styles/components/containers';
 import {Navigation} from '~/styles/layouts/navigation';
 import {invertedTheme, styled} from '~/styles/provider';
-import HeroImageSource from '~/../files/index/hero.webp';
 
 const Container = styled(ContentContainer, {
 	position: 'relative',
