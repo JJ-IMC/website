@@ -1,6 +1,8 @@
+import {RoundedButton} from '~/styles/components/buttons';
 import {BaseContainer, ContentContainer} from '~/styles/components/containers';
 import {Navigation} from '~/styles/layouts/navigation';
 import {invertedTheme, styled} from '~/styles/provider';
+import HeroImageSource from '~/../files/index/hero.webp';
 
 const Container = styled(ContentContainer, {
 	position: 'relative',
@@ -45,6 +47,9 @@ const EmphasizedText = styled('p', {
 	marginLeft: '4px',
 	top: 0,
 	marginTop: '500px',
+
+	// Fix over HeroImage
+	zIndex: 2,
 });
 
 const InteractiveBox = styled('article', {
@@ -71,6 +76,29 @@ const Comment = styled('p', {
 	fontWeight: '300',
 });
 
+const Button = styled(RoundedButton, {
+	float: 'right',
+	marginTop: '15px',
+
+	fontSize: '20px',
+	fontWeight: '300',
+
+	color: '$black',
+	background: '$brand',
+});
+
+const HeroImage = styled('img', {
+	borderRadius: '100%',
+	width: '500px',
+	height: '500px',
+
+	position: 'absolute',
+	left: 0,
+	marginLeft: '80px',
+	top: 0,
+	marginTop: '300px',
+});
+
 export default function IndexPage() {
 	return (
 		<BaseContainer className={invertedTheme} css={{height: '1000px'}}>
@@ -86,11 +114,17 @@ export default function IndexPage() {
 					BRAND
 				</OutlinedText>
 
+				<HeroImage
+					alt='A table with a white bottle and box shelf'
+					src={HeroImageSource}
+				/>
+
 				<InteractiveBox>
 					<p>
 						<strong>S</strong>pecial <strong>S</strong>olution
 					</p>
 					<Comment>결과로 입증하는 마케팅 전문 기업</Comment>
+					<Button>CONTACT US</Button>
 				</InteractiveBox>
 			</Container>
 		</BaseContainer>
