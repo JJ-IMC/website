@@ -27,14 +27,14 @@ export const listItems: Array<{
 	isActive: boolean
 }> = [
 	{
-		slug: 'menu1',
-		name: 'Menu',
+		slug: 'story',
+		name: 'STORY',
 		handler() { },
 		isActive: false,
 	},
 	{
-		slug: 'menu2',
-		name: 'Menu',
+		slug: 'team',
+		name: 'TEAM',
 		handler() { },
 		isActive: false,
 	},
@@ -45,14 +45,14 @@ export const listItems: Array<{
 		isActive: true,
 	},
 	{
-		slug: 'menu3',
-		name: 'Menu',
+		slug: 'service',
+		name: 'SERVICE',
 		handler() { },
 		isActive: false,
 	},
 	{
-		slug: 'menu4',
-		name: 'Menu',
+		slug: 'contact',
+		name: 'CONTACT US',
 		handler() { },
 		isActive: false,
 	},
