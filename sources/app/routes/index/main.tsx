@@ -99,19 +99,19 @@ const HeroImage = styled('img', {
 	marginTop: '300px',
 });
 
-export default function IndexPage() {
+export default function Main() {
 	return (
-		<BaseContainer className={invertedTheme} css={{height: '1000px'}}>
+		<BaseContainer className={invertedTheme} css={{height: 'calc(100% + 100px)'}}>
 			<Container>
 				<Navigation />
 				<OutlinedText position='first'>
-					MAKE
+          MAKE
 				</OutlinedText>
 				<EmphasizedText>
-					YOUR
+          YOUR
 				</EmphasizedText>
 				<OutlinedText position='third'>
-					BRAND
+          BRAND
 				</OutlinedText>
 
 				<HeroImage

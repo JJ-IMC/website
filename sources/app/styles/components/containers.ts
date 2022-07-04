@@ -5,8 +5,6 @@ export const BaseContainer = styled('section', {
 	backgroundColor: '$white',
 	fontFamily: '$sansSerif',
 
-	height: '100%',
-
 	margin: 0,
 });
 
