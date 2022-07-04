@@ -24,7 +24,4 @@ export const invertedTheme = createTheme({
 		white: '#000',
 		black: '#fff',
 	},
-	shadows: {
-		textOutlined: '-1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff',
-	},
 });

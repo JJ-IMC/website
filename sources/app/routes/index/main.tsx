@@ -14,7 +14,7 @@ const OutlinedText = styled('p', {
 	margin: 0,
 
 	color: '$white',
-	textShadow: '$textOutlined',
+	textShadow: '-1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff',
 
 	variants: {
 		position: {
