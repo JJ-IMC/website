@@ -101,7 +101,7 @@ const HeroImage = styled('img', {
 
 export default function Main() {
 	return (
-		<BaseContainer className={invertedTheme} css={{height: 'calc(100% + 100px)'}}>
+		<BaseContainer className={invertedTheme} css={{minHeight: '1080px'}}>
 			<Container>
 				<Navigation />
 				<OutlinedText position='first'>
