@@ -9,7 +9,7 @@ const Heading = styled('h3', {
 
 	fontSize: '80px',
 	fontStyle: 'normal',
-	fontWeight: '400', // Alt to 500
+	fontWeight: '500',
 	lineHeight: '120px',
 	margin: 0,
 	marginTop: '80px',
