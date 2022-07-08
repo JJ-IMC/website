@@ -2,6 +2,7 @@ import Moto from './moto';
 import Features from './features';
 import Intermediate from './intermediate';
 import Main from './main';
+import World from './world';
 
 export default function IndexPage() {
 	return (
@@ -10,6 +11,7 @@ export default function IndexPage() {
 			<Intermediate />
 			<Features />
 			<Moto />
+			<World />
 		</>
 	);
 }
