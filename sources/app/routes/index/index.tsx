@@ -3,6 +3,7 @@ import Features from './features';
 import Intermediate from './intermediate';
 import Main from './main';
 import World from './world';
+import Advantages from './advantages';
 
 export default function IndexPage() {
 	return (
@@ -12,6 +13,7 @@ export default function IndexPage() {
 			<Features />
 			<Moto />
 			<World />
+			<Advantages />
 		</>
 	);
 }
