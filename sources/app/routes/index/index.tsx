@@ -1,9 +1,10 @@
-import Moto from './moto';
+import Advantages from './advantages';
 import Features from './features';
 import Intermediate from './intermediate';
 import Main from './main';
+import Moto from './moto';
+import Process from './process';
 import World from './world';
-import Advantages from './advantages';
 
 export default function IndexPage() {
 	return (
@@ -14,6 +15,7 @@ export default function IndexPage() {
 			<Moto />
 			<World />
 			<Advantages />
+			<Process />
 		</>
 	);
 }
