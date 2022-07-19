@@ -29,6 +29,7 @@ const ProcessList = styled('ol', {
 	justifyContent: 'space-evenly',
 	listStyle: 'none',
 
+	padding: 0,
 	margin: 0,
 	marginTop: '100px',
 });

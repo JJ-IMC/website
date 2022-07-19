@@ -28,6 +28,7 @@ const AdvantageList = styled('ol', {
 	flexDirection: 'row',
 	justifyContent: 'space-evenly',
 	listStyle: 'none',
+	padding: 0,
 	margin: 0,
 });
 
