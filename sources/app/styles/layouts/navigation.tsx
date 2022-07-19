@@ -27,34 +27,10 @@ export const listItems: Array<{
 	isActive: boolean
 }> = [
 	{
-		slug: 'story',
-		name: 'STORY',
-		handler() { },
-		isActive: false,
-	},
-	{
-		slug: 'team',
-		name: 'TEAM',
-		handler() { },
-		isActive: false,
-	},
-	{
 		slug: 'logo',
 		name: 'JJIMC',
 		handler() { },
 		isActive: true,
-	},
-	{
-		slug: 'service',
-		name: 'SERVICE',
-		handler() { },
-		isActive: false,
-	},
-	{
-		slug: 'contact',
-		name: 'CONTACT US',
-		handler() { },
-		isActive: false,
 	},
 ];
 
