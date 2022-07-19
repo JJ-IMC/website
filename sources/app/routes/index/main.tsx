@@ -85,6 +85,8 @@ const Button = styled(RoundedButton, {
 
 	color: '$black',
 	background: '$brand',
+
+	cursor: 'pointer',
 });
 
 const HeroImage = styled('img', {
@@ -100,6 +102,10 @@ const HeroImage = styled('img', {
 });
 
 export default function Main() {
+	const handleContactButton = () => {
+		window.open('mailto:contact@jjimc.net');
+	};
+
 	return (
 		<BaseContainer className={invertedTheme} css={{minHeight: '1080px'}}>
 			<Container>
@@ -124,7 +130,7 @@ export default function Main() {
 						<strong>S</strong>pecial <strong>S</strong>olution
 					</p>
 					<Comment>결과로 입증하는 마케팅 전문 기업</Comment>
-					<Button>CONTACT US</Button>
+					<Button onClick={handleContactButton}>CONTACT US</Button>
 				</InteractiveBox>
 			</Container>
 		</BaseContainer>
