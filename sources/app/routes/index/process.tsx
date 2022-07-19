@@ -67,8 +67,8 @@ const ProcessItemDecoration = styled('div', {
 	backgroundColor: '$white',
 	borderRadius: '50%',
 	margin: '0 auto',
-	marginTop: '17px',
-	marginBottom: '35px',
+	marginTop: '5px',
+	marginBottom: '10px',
 });
 
 interface ProcessItemProps {
