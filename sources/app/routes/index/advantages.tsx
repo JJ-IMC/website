@@ -45,10 +45,10 @@ const AdvantageItemContainer = styled('li', {
 const AdvantageItemImage = styled('img', {
 	margin: '30px 0',
 	height: '160px',
-	objectFit: 'cover',
+	objectFit: 'contain',
 });
 
-const AdvantageItemHeading = styled('h2', {
+const AdvantageItemHeading = styled('h3', {
 	color: '$brand',
 
 	fontSize: '30px',
