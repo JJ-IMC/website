@@ -1,7 +1,10 @@
 import type {EntryContext} from '@remix-run/cloudflare';
 import {RemixServer} from '@remix-run/react';
 import {renderToString} from 'react-dom/server';
-import glory from './styles/glory';
+import {getCssText} from './styles/provider';
+
+const prepend = `
+`.trim();
 
 export default function handleRequest(
 	request: Request,
@@ -12,7 +15,8 @@ export default function handleRequest(
 	const markup = renderToString(
 		<RemixServer context={remixContext} url={request.url} />,
 	)
-		.replace('__STYLES__', `<style id="prestyle">${glory.raw ?? ''}</style>`);
+		.replace('__PREPEND__', prepend)
+		.replace('__STYLES__', `<style id="stitches">${getCssText() || ''}</style>`);
 
 	responseHeaders.set('Content-Type', 'text/html');
 

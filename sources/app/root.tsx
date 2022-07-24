@@ -9,6 +9,7 @@ import {
 } from '@remix-run/react';
 // Styles
 import modernNormalize from 'modern-normalize/modern-normalize.css';
+import globalStyle from './styles/statics/global.css';
 // Internalization
 import {Talkr} from 'talkr';
 import en from '../internalization/en.json';
@@ -25,7 +26,31 @@ export const links: LinksFunction = () => ([
 		rel: 'stylesheet',
 		href: modernNormalize,
 	},
+	{
+		rel: 'stylesheet',
+		href: globalStyle,
+	},
+	{
+		rel: 'preconnect',
+		href: 'https://fonts.googleapis.com',
+	},
+	{
+		rel: 'preconnect',
+		href: 'https://fonts.gstatic.com',
+		crossOrigin: 'anonymous',
+	},
+	{
+		rel: 'stylesheet',
+		href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap',
+	},
 ]);
+
+const insertions = {
+	head: [
+		'__STYLES__',
+		'__PREPEND__',
+	].join('\n'),
+};
 
 export default function App() {
 	return (
@@ -36,7 +61,7 @@ export default function App() {
 				{
 					// https://remix.run/docs/en/v1/guides/styling#css-in-js-libraries
 					typeof document === 'undefined'
-						? '__STYLES__'
+						? insertions.head
 						: null
 				}
 			</head>
