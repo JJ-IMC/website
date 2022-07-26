@@ -33,7 +33,7 @@ export const MobileNavigationParent = styled(HorizontalListParent, {
 
 	backgroundColor: 'black',
 
-	'@media only screen and (min-width: 999px)': {
+	'@media only screen and (min-width: 1001px)': {
 		display: 'none',
 	},
 });
