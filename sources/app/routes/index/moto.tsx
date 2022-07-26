@@ -29,6 +29,11 @@ const Heading = styled('h2', {
 	lineHeight: '150px',
 	margin: 0,
 
+	'@media only screen and (max-width: 1200px)': {
+		lineHeight: '45px',
+		fontSize: '45px',
+	},
+
 	'&>span': {
 		color: '#E7ECFF',
 		textShadow: '-1px 1px 0 #515C82, 1px 1px 0 #515C82, 1px -1px 0 #515C82, -1px -1px 0 #515C82',
@@ -36,6 +41,10 @@ const Heading = styled('h2', {
 
 	'&>br+span': {
 		marginLeft: '250px',
+
+		'@media only screen and (max-width: 1200px)': {
+			marginLeft: '50px',
+		},
 	},
 
 	'&>p': {

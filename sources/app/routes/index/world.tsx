@@ -31,6 +31,11 @@ const Heading = styled('h2', {
 	lineHeight: '90px',
 	margin: 0,
 
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '30px',
+		lineHeight: '45px',
+	},
+
 	'&>span': {
 		color: '$white',
 		textShadow: 'none',

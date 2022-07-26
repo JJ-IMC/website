@@ -16,6 +16,10 @@ const OutlinedText = styled('p', {
 	color: '$white',
 	textShadow: '-1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff',
 
+	'@media only screen and (max-width: 800px)': {
+		fontSize: '100px',
+	},
+
 	variants: {
 		position: {
 			first: {
@@ -24,6 +28,11 @@ const OutlinedText = styled('p', {
 				marginRight: '90px',
 				top: 0,
 				marginTop: '200px',
+
+				'@media only screen and (max-width: 800px)': {
+					marginRight: '25px',
+					overflow: 'hidden',
+				},
 			},
 			third: {
 				position: 'absolute',
@@ -31,6 +40,13 @@ const OutlinedText = styled('p', {
 				marginRight: '200px',
 				top: 0,
 				marginTop: '750px',
+
+				'@media only screen and (max-width: 800px)': {
+					zIndex: 3,
+
+					marginRight: 0,
+					overflow: 'hidden',
+				},
 			},
 		},
 	},
@@ -50,6 +66,11 @@ const EmphasizedText = styled('p', {
 
 	// Fix over HeroImage
 	zIndex: 2,
+
+	'@media only screen and (max-width: 800px)': {
+		fontSize: '100px',
+		marginLeft: '50px',
+	},
 });
 
 const InteractiveBox = styled('article', {
@@ -69,6 +90,10 @@ const InteractiveBox = styled('article', {
 	'&>p>strong': {
 		color: '$brand',
 		fontWeight: '700',
+	},
+
+	'@media only screen and (max-width: 800px)': {
+		marginTop: '925px',
 	},
 });
 
@@ -99,6 +124,13 @@ const HeroImage = styled('img', {
 	marginLeft: '80px',
 	top: 0,
 	marginTop: '300px',
+
+	overflow: 'hidden',
+
+	'@media only screen and (max-width: 800px)': {
+		marginLeft: '-200px',
+		marginTop: '400px',
+	},
 });
 
 export default function Main() {
@@ -107,7 +139,13 @@ export default function Main() {
 	};
 
 	return (
-		<BaseContainer className={invertedTheme} css={{minHeight: '1080px'}}>
+		<BaseContainer className={invertedTheme} css={{
+			minHeight: '1080px',
+
+			'@media only screen and (max-width: 800px)': {
+				minHeight: '1200px',
+			},
+		}}>
 			<Container>
 				<Navigation />
 				<OutlinedText position='first'>
