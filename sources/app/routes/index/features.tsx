@@ -21,6 +21,11 @@ const Heading = styled('h3', {
 
 	position: 'relative',
 	zIndex: 2,
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '40px',
+		lineHeight: '60px',
+	},
 });
 
 const Vector = styled('svg', {
@@ -57,7 +62,7 @@ const EntryOuter = styled('div', {
 		width: '100%',
 
 		left: 0,
-		marginLeft: '16px !important',
+		marginLeft: '0 !important',
 		marginRight: '0 !important',
 	},
 });
@@ -116,7 +121,7 @@ const Entry: FC<IEntryProps> = ({heading, content, outerStyles}) => (
 export default function Features() {
 	return (
 		<>
-			<ContentContainer css={{position: 'relative', height: '1300px'}}>
+			<ContentContainer css={{position: 'relative', height: '1300px', overflow: 'hidden'}}>
 				<article>
 					<Heading>
 						THIS IS<br />

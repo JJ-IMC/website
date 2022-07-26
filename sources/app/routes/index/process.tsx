@@ -17,6 +17,11 @@ const Heading = styled('h2', {
 	color: '#000B33',
 	textShadow: '-1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff',
 
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '40px',
+		lineHeight: '60px',
+	},
+
 	'&>span': {
 		color: '$white',
 		textShadow: 'none',
@@ -32,6 +37,10 @@ const ProcessList = styled('ol', {
 	padding: 0,
 	margin: 0,
 	marginTop: '100px',
+
+	'@media only screen and (max-width: 1000px)': {
+		flexDirection: 'column',
+	},
 });
 
 const ProcessItemContainer = styled('li', {
@@ -50,6 +59,10 @@ const ProcessItemImage = styled('img', {
 	height: '100px',
 	width: '100%',
 	objectFit: 'contain',
+
+	'@media only screen and (max-width: 1000px)': {
+		height: '62px',
+	},
 });
 
 const ProcessItemHeading = styled('h3', {

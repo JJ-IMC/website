@@ -42,7 +42,9 @@ const OutlinedText = styled('p', {
 				marginTop: '750px',
 
 				'@media only screen and (max-width: 800px)': {
-					marginRight: '-50px',
+					zIndex: 3,
+
+					marginRight: 0,
 					overflow: 'hidden',
 				},
 			},
@@ -67,7 +69,7 @@ const EmphasizedText = styled('p', {
 
 	'@media only screen and (max-width: 800px)': {
 		fontSize: '100px',
-		marginLeft: '75px',
+		marginLeft: '50px',
 	},
 });
 
