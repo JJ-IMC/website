@@ -52,6 +52,14 @@ const EntryOuter = styled('div', {
 
 	display: 'inline-block',
 	borderTop: '$black 3px solid',
+
+	'@media only screen and (max-width: 1000px)': {
+		width: '100%',
+
+		left: 0,
+		marginLeft: '16px !important',
+		marginRight: '0 !important',
+	},
 });
 
 const EntryHeading = styled('h2', {
@@ -123,7 +131,7 @@ export default function Features() {
 					heading='✨ 고객사가 있기에 우리가 존재합니다.'
 					content='우리는 서로를 성장케하는 에너지를 가진 한 팀으로 이루어져 있어요.'
 					outerStyles={{
-						marginTop: '325px',
+						marginTop: '350px',
 						right: 0,
 						marginRight: '16px',
 					}}
@@ -133,7 +141,7 @@ export default function Features() {
 					content={`정보 과잉 시대에 당신의 소리를 뚜렷이
 많고 많은 브랜드 중 유일무이한 브랜드로 자리 잡을 수 있도록.`}
 					outerStyles={{
-						marginTop: '660px',
+						marginTop: '685px',
 						left: 0,
 						marginLeft: '16px',
 					}}
@@ -143,7 +151,7 @@ export default function Features() {
 					content={`상생 가치를 통해 당사와 고객사 모두 만족할 수 있는
 최적의 솔루션을 제안하여 최고의 결과물을 이루어냅니다.`}
 					outerStyles={{
-						marginTop: '1000px',
+						marginTop: '1025px',
 						right: 0,
 						marginRight: '16px',
 					}}
