@@ -72,6 +72,10 @@ const EntryHeading = styled('h2', {
 
 	color: '$brand',
 	lineHeight: '50px',
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '26px',
+	},
 });
 
 const EntryContent = styled('p', {
@@ -80,6 +84,10 @@ const EntryContent = styled('p', {
 
 	fontSize: '24px',
 	lineHeight: '35px',
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '16px',
+	},
 });
 
 interface IEntryProps {
