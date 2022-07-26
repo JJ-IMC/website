@@ -21,6 +21,11 @@ const Heading = styled('h2', {
 		color: '$brand',
 		textShadow: 'none',
 	},
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '35px',
+		lineHeight: '52px',
+	},
 });
 
 const AdvantageList = styled('ol', {
@@ -30,6 +35,10 @@ const AdvantageList = styled('ol', {
 	listStyle: 'none',
 	padding: 0,
 	margin: 0,
+
+	'@media only screen and (max-width: 850px)': {
+		flexDirection: 'column',
+	},
 });
 
 const AdvantageItemContainer = styled('li', {
