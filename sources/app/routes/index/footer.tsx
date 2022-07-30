@@ -1,10 +1,10 @@
 import {BaseContainer, ContentContainer} from '~/styles/components/containers';
 import {styled} from '~/styles/provider';
 // Vectors
+import type {FC} from 'react';
 import FacebookLogoImage from '~/../files/index/footer/facebook.svg';
 import InstagramLogoImage from '~/../files/index/footer/instagram.svg';
 import NaverBlogLogoImage from '~/../files/index/footer/nblog.svg';
-import type {FC} from 'react';
 
 const CompanyTitle = styled('h2', {
 	color: '$white',

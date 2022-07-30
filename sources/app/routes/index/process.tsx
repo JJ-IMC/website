@@ -3,9 +3,9 @@ import {BaseContainer, ContentContainer} from '~/styles/components/containers';
 import {styled} from '~/styles/provider';
 // Vectors
 import FirstVectorImage from '~/../files/index/processes/first.svg';
+import FourthVectorImage from '~/../files/index/processes/fourth.svg';
 import SecondVectorImage from '~/../files/index/processes/second.svg';
 import ThirdVectorImage from '~/../files/index/processes/third.svg';
-import FourthVectorImage from '~/../files/index/processes/fourth.svg';
 
 const Heading = styled('h2', {
 	margin: 0,
