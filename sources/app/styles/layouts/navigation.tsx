@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {HorizontalListItem, HorizontalListParent} from '../components/list/horizontal';
 import {styled} from '../provider';
 import MobileNavigationCollapseButtonImage from '~/../files/m-nav-col.svg';
+import {useNavigate} from '@remix-run/react';
 
 export const NavigationParent = styled(HorizontalListParent, {
 	gap: '50px',
@@ -15,6 +16,8 @@ export const NavigationParent = styled(HorizontalListParent, {
 export const NavigationItem = styled(HorizontalListItem, {
 	color: '$black',
 	fontSize: '20px',
+
+	cursor: 'pointer',
 
 	variants: {
 		isActive: {
@@ -87,18 +90,30 @@ export const MobileNavigationCollapseBox = styled('ul', {
 export const listItems: Array<{
 	slug: string,
 	name: string,
-	handler: () => void,
+	// eslint-disable-next-line no-unused-vars
+	handler: (navigate: ReturnType<typeof useNavigate>) => void,
 	isActive: boolean
 }> = [
 	{
+		slug: 'story',
+		name: 'STORY',
+		handler(navigate) {
+			navigate('/story', {replace: true});
+		},
+		isActive: false,
+	},
+	{
 		slug: 'logo',
 		name: 'JJIMC',
-		handler() { },
+		handler(navigate) {
+			navigate('/', {replace: true});
+		},
 		isActive: true,
 	},
 ];
 
 export function Navigation() {
+	const navigate = useNavigate();
 	const [mobileCollapseOpen, setMobileCollapseOpen] = useState(false);
 
 	const onCollapseButtonClick = () => {
@@ -114,6 +129,7 @@ export function Navigation() {
 						.map(listItem => (
 							<NavigationItem
 								key={'jjimc-list-' + listItem.slug}
+								onClick={() => listItem.handler(navigate)}
 								isActive={listItem.isActive}
 							>
 								{listItem.name}
