@@ -1,3 +1,9 @@
+import Main from './main';
+
 export default function StoryPage() {
-	return null;
+	return (
+		<>
+			<Main />
+		</>
+	);
 }
