@@ -12,6 +12,11 @@ const CompanyTitle = styled('h2', {
 	fontWeight: '700',
 	lineHeight: '32px',
 	margin: 0,
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '14px',
+		lineHeight: '20px',
+	},
 });
 
 const CompanyMeta = styled('p', {
@@ -20,6 +25,11 @@ const CompanyMeta = styled('p', {
 	fontWeight: '400',
 	lineHeight: '26px',
 	margin: '15px 0',
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '14px',
+		lineHeight: '20px',
+	},
 });
 
 const SocialList = styled('ul', {
@@ -52,6 +62,11 @@ const SocialItemImage = styled('img', {
 	objectFit: 'contain',
 	height: '30px',
 	width: '30px',
+
+	'@media only screen and (max-width: 1000px)': {
+		height: '20px',
+		width: '20px',
+	},
 });
 
 interface SocialItemProps {
