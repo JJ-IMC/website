@@ -145,6 +145,7 @@ export function Navigation() {
 						.map(listItem => (
 							<NavigationItem
 								key={'jjimc-list-' + listItem.slug}
+								onClick={() => listItem.handler(navigate)}
 								isActive={listItem.isActive}
 							>
 								{listItem.name}
