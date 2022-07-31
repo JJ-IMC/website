@@ -21,11 +21,15 @@ const LeftImage = styled('img', {
 
 	height: '300px',
 	width: 'auto',
+
+	'@media only screen and (max-width: 1000px)': {
+		display: 'none',
+	},
 });
 
 const FeaturesList = styled('ul', {
 	listStyle: 'none',
-	margin: 0,
+	padding: 0,
 
 	display: 'flex',
 	flexDirection: 'column',
@@ -37,6 +41,8 @@ const FeaturesItemOuter = styled('li', {
 	flexDirection: 'row',
 
 	gap: '16px',
+
+	margin: 0,
 });
 
 const CenterProxy = styled('div', {
@@ -61,6 +67,11 @@ const FeaturesItemContent = styled('p', {
 	},
 
 	width: '100%',
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '14px',
+		lineHeight: '20px',
+	},
 });
 
 interface FeaturesItemProps {
