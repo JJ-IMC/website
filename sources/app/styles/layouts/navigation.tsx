@@ -105,6 +105,14 @@ export const listItems: Array<{
 		isActive: false,
 	},
 	{
+		slug: 'team',
+		name: 'TEAM',
+		handler(navigate) {
+			navigate('/team', {replace: true});
+		},
+		isActive: false,
+	},
+	{
 		slug: 'logo',
 		name: 'JJIMC',
 		handler(navigate) {
