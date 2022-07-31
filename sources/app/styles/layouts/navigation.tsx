@@ -47,6 +47,8 @@ export const MobileNavigationHeader = styled('h1', {
 	fontSize: '16px',
 	lineHeight: '24px',
 	margin: '0',
+
+	cursor: 'pointer',
 });
 
 export const MobileNavigationCollapseButton = styled('img', {
@@ -154,7 +156,7 @@ export function Navigation() {
 				}
 			</MobileNavigationCollapseBox>
 			<MobileNavigationParent>
-				<MobileNavigationHeader>
+				<MobileNavigationHeader onClick={() => navigate('/', {replace: true})}>
 					JJIMC
 				</MobileNavigationHeader>
 				<MobileNavigationCollapseButton
