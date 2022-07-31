@@ -15,6 +15,11 @@ const BackgroundHeading = styled('h2', {
 	top: 0,
 	marginTop: '180px',
 	right: 0,
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '80px',
+		lineHeight: '120px',
+	},
 });
 
 const Heading = styled('h1', {
@@ -30,6 +35,11 @@ const Heading = styled('h1', {
 
 	paddingTop: '300px',
 	marginBottom: '25px',
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '18px',
+		lineHeight: '26px',
+	},
 });
 
 const Description = styled('p', {
@@ -38,6 +48,11 @@ const Description = styled('p', {
 	lineHeight: '30px',
 
 	margin: 0,
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '14px',
+		lineHeight: '21px',
+	},
 });
 
 const EmphasisText = styled('h3', {
@@ -67,6 +82,18 @@ const EmphasisText = styled('h3', {
 	},
 
 	marginTop: '300px',
+
+	'@media only screen and (max-width: 1000px)': {
+		fontSize: '20px',
+		lineHeight: '30px',
+
+		'&>img': {
+			width: '200px',
+			height: '200px',
+			marginTop: '-70px',
+			marginLeft: '40px',
+		},
+	},
 });
 
 export default function Main() {
