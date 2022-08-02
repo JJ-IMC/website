@@ -100,7 +100,7 @@ export const listItems: Array<{
 		slug: 'story',
 		name: 'STORY',
 		handler(navigate) {
-			navigate('/story', {replace: true});
+			navigate('/story');
 		},
 		isActive: false,
 	},
@@ -108,7 +108,7 @@ export const listItems: Array<{
 		slug: 'team',
 		name: 'TEAM',
 		handler(navigate) {
-			navigate('/team', {replace: true});
+			navigate('/team');
 		},
 		isActive: false,
 	},
@@ -116,9 +116,17 @@ export const listItems: Array<{
 		slug: 'logo',
 		name: 'JJIMC',
 		handler(navigate) {
-			navigate('/', {replace: true});
+			navigate('/');
 		},
 		isActive: true,
+	},
+	{
+		slug: 'service',
+		name: 'SERVICE',
+		handler(navigate) {
+			navigate('/service');
+		},
+		isActive: false,
 	},
 ];
 
