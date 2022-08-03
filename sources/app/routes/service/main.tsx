@@ -77,6 +77,8 @@ const KeyFeatureList = styled('ul', {
 	display: 'flex',
 	flexDirection: 'row',
 	gap: '50px',
+
+	marginBottom: '130px',
 });
 
 const KeyFeatureItemFrame = styled('li', {
@@ -96,7 +98,7 @@ const KeyFeatureItemImage = styled('img', {
 
 	margin: '0 auto',
 
-	'@media only screen and (max-width: 500px)': {
+	'@media only screen and (max-width: 400px)': {
 		width: '30px',
 	},
 });
@@ -108,7 +110,7 @@ const KeyFeatureItemText = styled('p', {
 
 	color: '$black',
 
-	'@media only screen and (max-width: 500px)': {
+	'@media only screen and (max-width: 400px)': {
 		fontSize: '12px',
 		lineHeight: '18px',
 	},
