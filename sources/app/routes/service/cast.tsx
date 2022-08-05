@@ -6,7 +6,7 @@ import {BaseContainer, ContentContainer} from '~/styles/components/containers';
 import {invertedTheme, styled} from '~/styles/provider';
 import {Details, Heading} from './sns';
 
-const KeyFeatureList = styled('ul', {
+export const KeyFeatureList = styled('ul', {
 	listStyle: 'none',
 	padding: 0,
 
@@ -19,7 +19,7 @@ const KeyFeatureList = styled('ul', {
 	marginBottom: '130px',
 });
 
-const KeyFeatureItemFrame = styled('li', {
+export const KeyFeatureItemFrame = styled('li', {
 	listStyle: 'none',
 	padding: 0,
 
@@ -30,7 +30,7 @@ const KeyFeatureItemFrame = styled('li', {
 	gap: '15px',
 });
 
-const KeyFeatureItemImage = styled('img', {
+export const KeyFeatureItemImage = styled('img', {
 	width: '70px',
 	height: '100%',
 
@@ -41,7 +41,7 @@ const KeyFeatureItemImage = styled('img', {
 	},
 });
 
-const KeyFeatureItemText = styled('p', {
+export const KeyFeatureItemText = styled('p', {
 	fontWeight: '700',
 	fontSize: '18px',
 	lineHeight: '26px',
@@ -54,11 +54,11 @@ const KeyFeatureItemText = styled('p', {
 	},
 });
 
-interface IKeyFeatureProps {
+export interface IKeyFeatureProps {
   imageUrl: string
 }
 
-const KeyFeature: FC<IKeyFeatureProps> = ({
+export const KeyFeature: FC<IKeyFeatureProps> = ({
 	imageUrl,
 	children,
 }) => (
