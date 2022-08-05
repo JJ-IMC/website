@@ -1,5 +1,6 @@
 import Footer from '../index/footer';
 import Ad from './ad';
+import Cast from './cast';
 import Cm from './cm';
 import Main from './main';
 import Sns from './sns';
@@ -17,6 +18,7 @@ export default function ServicePage() {
 			<Video />
 			<Youtube />
 			<Ad />
+			<Cast />
 			<Footer />
 		</>
 	);
