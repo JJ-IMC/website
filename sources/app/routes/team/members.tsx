@@ -149,12 +149,12 @@ export default function Members() {
 							position='Marketing 1Team PM'
 						/>
 						<Profile
-							imageUrl={Marketing1MemberAvatar}
+							imageUrl={Marketing1Member2Avatar}
 							name='차종기'
 							position='Marketing 1Team M'
 						/>
 						<Profile
-							imageUrl={Marketing1Member2Avatar}
+							imageUrl={Marketing1MemberAvatar}
 							name='이송은'
 							position='Marketing 1Team M'
 						/>
