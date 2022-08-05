@@ -34,7 +34,7 @@ export const MobileNavigationParent = styled(HorizontalListParent, {
 	margin: 0,
 	justifyContent: 'space-between',
 
-	backgroundColor: 'black',
+	backgroundColor: '$white',
 
 	'@media only screen and (min-width: 1001px)': {
 		display: 'none',
@@ -61,7 +61,7 @@ export const MobileNavigationCollapseButton = styled('img', {
 
 export const MobileNavigationCollapseBox = styled('ul', {
 	zIndex: 2,
-	backgroundColor: 'black',
+	backgroundColor: '$white',
 
 	listStyle: 'none',
 	paddingLeft: 0,
@@ -125,6 +125,14 @@ export const listItems: Array<{
 		name: 'SERVICE',
 		handler(navigate) {
 			navigate('/service');
+		},
+		isActive: false,
+	},
+	{
+		slug: 'contact',
+		name: 'CONTACT',
+		handler(navigate) {
+			navigate('/contact');
 		},
 		isActive: false,
 	},
