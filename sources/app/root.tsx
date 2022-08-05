@@ -6,6 +6,8 @@ import {
 	Outlet,
 	Scripts,
 	ScrollRestoration,
+	useFetchers,
+	useTransition,
 } from '@remix-run/react';
 // Styles
 import modernNormalize from 'modern-normalize/modern-normalize.css';
@@ -14,6 +16,10 @@ import globalStyle from './styles/statics/global.css';
 import {Talkr} from 'talkr';
 import en from '../internalization/en.json';
 import ko from '../internalization/ko.json';
+// Progress bar
+import NProgress from 'nprogress';
+import nProgressStyles from 'nprogress/nprogress.css';
+import {useEffect, useMemo} from 'react';
 
 export const meta: MetaFunction = () => ({
 	charset: 'utf-8',
@@ -29,6 +35,10 @@ export const links: LinksFunction = () => ([
 	{
 		rel: 'stylesheet',
 		href: globalStyle,
+	},
+	{
+		rel: 'stylesheet',
+		href: nProgressStyles,
 	},
 	{
 		rel: 'preconnect',
@@ -53,6 +63,37 @@ const insertions = {
 };
 
 export default function App() {
+	const transition = useTransition();
+	const fetchers = useFetchers();
+
+	const state = useMemo<'idle' | 'loading'>(
+		() => {
+			const states = [
+				transition.state,
+				...fetchers.map(fetcher => fetcher.state),
+			];
+			if (states.every(state => state === 'idle')) {
+				return 'idle';
+			}
+
+			return 'loading';
+		},
+		[transition.state, fetchers],
+	);
+
+	useEffect(() => {
+		if (state === 'loading') {
+			NProgress.start();
+		}
+
+		if (state === 'idle') {
+			NProgress.done();
+		}
+	}, [
+		state,
+		transition.state,
+	]);
+
 	return (
 		<html lang='en'>
 			<head>
