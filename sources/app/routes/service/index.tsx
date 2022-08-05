@@ -4,6 +4,7 @@ import Main from './main';
 import Sns from './sns';
 import Video from './video';
 import Website from './website';
+import Youtube from './youtube';
 
 export default function ServicePage() {
 	return (
@@ -13,6 +14,7 @@ export default function ServicePage() {
 			<Cm />
 			<Website />
 			<Video />
+			<Youtube />
 			<Footer />
 		</>
 	);
